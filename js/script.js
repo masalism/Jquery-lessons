@@ -107,30 +107,52 @@ $(function () {
 
   // JQUERY METHODS FOR TRAVERSAL //
 
-  // $("#list").find("li").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").children("li").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").parents("div").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").parent().css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").siblings("p").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").siblings(":header").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)");
+  /*
+  $("#list").find("li").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").children("li").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").parents("div").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").parent().css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").siblings("p").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").siblings(":header").css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)");
+  */
 
   // JQUERY METHODS FOR FILTERING //
 
-  //  $("#list").children("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)");
-  //  $("li").filter(function(index) { 
-  //     return index % 3 === 2;
-  //   }).css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li").first().css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li").last().css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li").eq(4).css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li").eq(-2).css("background-color", "rgba(180, 180, 30, 0.8)");
+  /*
+   $("#list").children("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)");
+   $("li").filter(function(index) { 
+      return index % 3 === 2;
+    }).css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("li").first().css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("li").last().css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("li").eq(4).css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("li").eq(-2).css("background-color", "rgba(180, 180, 30, 0.8)");
 
-  // $("li").not(function (index) {
-  //   return index % 3 === 2;
-  // }).css("background-color", "rgba(180, 180, 30, 0.8)");
+  $("li").not(function (index) {
+    return index % 3 === 2;
+  }).css("background-color", "rgba(180, 180, 30, 0.8)");
+  */
 
+  // ADDING NEW ELEMENTS TO THE DOM //
+
+  /*
+  $("ul ul:first").append("<li>I am gonna be the last sub-item</li>");
+  $("<li>I am gonna be the last item</li>").appendTo($("ul ul:first"));
+  $("ul ul").prepend("<li>I am gonna be the first sub-item</li>");
+  $("<h4>Mantas Masalis</h4>").prependTo("#content");
+  $(".red-box").after("<div class='red-box'>Another red</div>");
+  $(".blue-box").before("<div class='blue-box'>Blue Friend</div>");
+
+  $(".blue-box").before(function() {
+    return "<div class='blue-box'>Blue 2</div>";
+  });
+
+  $("p").after($("#list"));
+  */
+
+  
 
 
 });
