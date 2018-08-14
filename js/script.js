@@ -152,7 +152,78 @@ $(function () {
   $("p").after($("#list"));
   */
 
+  // REPLACING ELEMENTS AND CONTENT //
+
+  /*
+  $("li").replaceWith("<li>Replaced</li>");
+  $("li").replaceWith(function () { 
+    return "<li>Replaced with function</li>";
+  });
+
+  let firstListItem = $("li:first");
+  $("p").replaceWith(firstListItem);
   
 
+  $(".red-box, .blue-box").replaceWith("<div class='green-box'>More Green</div>");
 
+  $("<div class='green-box'>More Green</div>").replaceAll(".red-box, .blue-box");
+  */
+
+  // REMOVING ELEMENTS AND CONTENT //
+
+  /*
+  $("li").remove();
+  $("form").children().not("input:text, textarea, br").remove();
+
+  let detachedListItem = $("li").detach();
+  $("#content").append(detachedListItem);
+
+  $("p:first").empty();
+
+  $(".red-box, .blue-box, .green-box").empty();
+  */
+
+  // MANIPULATING ATRIBUTES AND PROPERTIES //
+
+  /*
+  let spelcialLink = $("#special-link");
+
+  console.log(spelcialLink.attr("href"));
+  console.log(spelcialLink.attr("title"));
+
+  spelcialLink.attr("href", "http://delfi.lt");
+
+  let checkbox = $("input:checkbox");
+  console.log(checkbox.prop("checked"));
+  console.log(checkbox.attr("checked"));
+
+  let textInput = $("input:text");
+  textInput.val("Mantas Masalis")
+  console.log(textInput.val());
+
+  let rangeInput = $("input[type='range']");
+  console.log(rangeInput.val());
+  */
+
+  // CREATING AN IMAGE SLIDER //
+  /*
+  let galleryImage = $(".gallery").find("img").first();
+
+  let images = [
+    "/images/laptop-mobile_small.jpg",
+    "/images/laptop-on-table_small.jpg",
+    "/images/people-office-group-team_small.jpg"
+  ];
+
+  let i = 0;
+
+  setInterval(function() {
+    i = (i + 1) % images.length;
+    galleryImage.fadeOut(function(){
+      $(this).attr("src", images[i]);
+      $(this).fadeIn();
+    });
+    console.log(galleryImage.attr("src"));
+  }, 2000);
+  */
 });
