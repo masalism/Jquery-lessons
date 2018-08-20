@@ -226,4 +226,85 @@ $(function () {
     console.log(galleryImage.attr("src"));
   }, 2000);
   */
+
+  // CHANGING CSS PROPERTIES OF ELEMENTS //
+
+  /*
+  $(".gallery").css("display", "none");
+
+  var redBox = $(".red-box");
+  console.log(redBox.css("width"));
+  console.log(redBox.width());
+
+  redBox.css("background-color", "#AA7700");
+  $("p").css("font-size", "18px");
+  redBox.css("width", "+=20px");
+
+  var properties = $("p").css(["font-size", "line-height", "color"]);
+  console.log(properties);
+  console.log(properties["font-size"]);
+
+  // redBox.css("user-select", "none");
+
+  redBox.css("user-select", function () { 
+    return "none";
+  });
+ */
+
+  // ADDING REMOVING CSS CLASSES //
+
+  /*
+  $("a").addClass("fancy-link");
+  $("p:first").addClass("large emphasize");
+
+  $("li li").addClass(function (index) { 
+   $(this).addClass("item" + index);
+  });
+
+  $("div").addClass(function (index, currentClass) { 
+   if(currentClass === "dummy") {
+     return "red-box";
+   }
+  });
+
+  $(".red-box").removeClass("red-box").addClass("blue-box");
+    
+  $(".dummy").removeClass("dummy").addClass("green-box");
+  */
+
+  // CHANGING THE DATA OF AN ELEMENT //
+
+  /*
+  let gallery = $(".gallery");
+  let images = [
+    "/images/laptop-mobile_small.jpg",
+    "/images/laptop-on-table_small.jpg",
+    "/images/people-office-group-team_small.jpg"
+  ];
+
+  gallery.data("availableImages", images);
+  console.log(gallery.data("availableImages"));
+  gallery.data("name", "The Awesome Gallery");
+  console.log(gallery.data());
+  gallery.removeData("name");
+  console.log(gallery.data("name"));
+  
+  let firstPar = $("p:first");
+  console.log(firstPar.data("mydata"));
+  */
+
+  // RETRIEVING AND CHANGING THE CONTENT OF AN ELEMENT //
+
+  let firstPar = $("p:first");
+  console.log(firstPar.text());
+  console.log(firstPar.html());
+  console.log($("p").html());
+
+  // firstPar.text("<strong>Hello</strong> World!");
+  // firstPar.html("<strong>Hello</strong> World!");
+
+  firstPar.html(firstPar.html() + " this was just appended");
+
+
+
 });
