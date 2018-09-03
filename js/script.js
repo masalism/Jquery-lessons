@@ -475,5 +475,18 @@ $(function () {
 
   // HANDLING KEYDOWN AND KEYUP EVENTS //
 
+  $("html").keydown(function(event) {
+    console.log(event.which);
+  });
+
+  var ARROW_RIGHT = 39;
+  $("html").keydown(function(event) {
+    if(event.which === ARROW_RIGHT) {
+      $(".blue-box").stop().animate({
+        marginLeft: "+=10px"
+      }, 50);
+    }
+  });
+
 });
 
