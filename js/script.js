@@ -412,5 +412,22 @@ $(function () {
 
   // DELEGATED EVENTS //
 
+  // $("p").click(function() {
+  //   $(this).slideUp();
+  // });
+
+  // $("#content").append("<p>This is a dinamically added paragraph</p>");
+
+  // delegated event
+  $("#content").on("click", "p", function() {
+    $(this).slideUp();
+  });
+
+  $("#content").append("<p>This is a dinamically added paragraph</p>");
+
+  $("body").on("mouseenter", "li", function() {
+    $(this).css("color", "#666");
+  });
+
 });
 
