@@ -41,12 +41,29 @@ $(function() {
   // CODING ACTIVITY: RETRIEVING POKEMON DATA FROM THEPOKEAPI //
 
   var pokeapi = "https://pokeapi.co/api/v2/generation/1";
+  var pokemonByName = "https://pokeapi.co/api/v2/pokemon/";
 
   $.getJSON(pokeapi).done(function(data) {
     console.log(data);  // Explore available data in the Developer Tools Console
     $.each(data.pokemon_species, function(index, pokemon) {
       var name = capitalize(pokemon.name);
-      var paragraph = $("<p>").html("Pokémon species no. " + (index+1) + " is " + name);
+      var link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name));
+      var paragraph = $("<p>").html("Pokémon species no. " + (index+1) + " is ").append(link);
+
+      link.click(function(event) {
+        $.getJSON(pokemonByName + pokemon.name).done(function (details) {
+          console.log(details);
+          var pokemonDiv = $("#pokemon-details");
+          pokemonDiv.empty();
+          pokemonDiv.append("<h2>" + name + "</h2>");
+          pokemonDiv.append("<img src='" + details.sprites.front_default + "'>");
+          pokemonDiv.append("<img src='" + details.sprites.back_default + "'>");
+          pokemonDiv.append("<img src='" + details.sprites.front_shiny + "'>");
+          pokemonDiv.append("<img src='" + details.sprites.back_shiny + "'>");
+        });
+        event.preventDefault();
+      });
+
       paragraph.appendTo("#pokedex");
     });
   }).fail(function() {
