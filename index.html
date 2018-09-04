@@ -31,12 +31,27 @@
 
 
       
-        <form action="">
-            <input type="text" value="Mantas"><br>
-            <input type="password"><br>
-            <input type="range" min="1" max="10" value="7"><br>
-            <input type="checkbox" checked name="cb"><label for="cb">Check Me</label><br>
-            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <form action="" id="form">
+            <input type="text" placeholder="Enter Your Name" id="name"><br>
+            <span id="name-feedback"></span><br>
+
+            <input type="password" id="password" placeholder="Enter your password"><br>
+            <span id="password-feedback"></span><br>
+
+            <input type="range" min="1" max="9" value="5" id="amount"><br>
+            
+            <textarea name="" cols="30" rows="10" id="message"></textarea><br>
+            <span id="message-feedback"></span><br>
+
+            <input type="checkbox" checked name="cb" id="checkbox"><label for="cb">Check Me</label><br>
+            <span id="checkbox-feedback"></span><br>
+
+            <!-- <select name="" id="selection">
+                <option value="">Option 1</option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+                <option value="">Option 4</option>
+            </select> -->
             <input type="submit" value="submit">
         </form>
     </div>
